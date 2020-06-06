@@ -78,6 +78,7 @@
         methods: {
             onTimeChange () {
                 this.time = this.timer.getTimeValues().toString(this.timerUnits);
+                this.$emit('time-changed', this.time);
             },
 
             onTimeExpire () {
